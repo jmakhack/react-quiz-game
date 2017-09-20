@@ -1,0 +1,8 @@
+.header {
+  position: relative;
+  font-size: 2rem;
+  padding-bottom: 4rem;
+  width: 64%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}

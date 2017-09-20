@@ -12,33 +12,3 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-.header {
-  position: relative;
-  font-size: 2rem;
-  padding-bottom: 4rem;
-  width: 64%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-}
-
-.buttons button {
-  color: #fff;
-  margin: 1rem;
-  font-size: 1.1rem;
-  font-family: 'Heebo', sans-serif;
-  background-color: Transparent;
-  outline: none;
-  cursor: pointer;
-  width: 7.2rem;
-  height: 3rem;
-  border: 0.075rem;
-  border-color: #fff;
-  border-style: solid;
-}
-
-.buttons button:active {
-  color: #009099;
-  background-color: #fff;
-}
-

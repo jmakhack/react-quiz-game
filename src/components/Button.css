@@ -1,0 +1,19 @@
+.button {
+  color: #fff;
+  margin: 1rem;
+  font-size: 1.1rem;
+  font-family: 'Heebo', sans-serif;
+  background-color: Transparent;
+  outline: none;
+  cursor: pointer;
+  width: 7.2rem;
+  height: 3rem;
+  border: 0.075rem;
+  border-color: #fff;
+  border-style: solid;
+}
+
+.button:active {
+  color: #009099;
+  background-color: #fff;
+}
