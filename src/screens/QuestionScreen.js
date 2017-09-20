@@ -72,7 +72,7 @@ class QuestionScreen extends Component {
       this.props.eventEmitter.emit('incrementScore', 1)
       this.showNextQuestion()
     } else {
-      this.props.eventEmitter.emit('showNextScreen', 'end')
+      this.props.eventEmitter.emit('showNextScreen')
     }
   }
 

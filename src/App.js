@@ -25,7 +25,20 @@ class App extends Component {
   componentWillMount() {
     this.eventEmitter = new EventEmitter()
 
-    this.eventEmitter.addListener('showNextScreen', nextScreen => {
+    this.eventEmitter.addListener('showNextScreen', () => {
+      const { activeScreen } = this.state
+      let nextScreen
+      switch(activeScreen) {
+        case 'start':
+          nextScreen = 'question'
+          break
+        case 'question':
+          nextScreen = 'end'
+          break
+        default:
+          nextScreen = 'start'
+          break;
+      }
       this.setState({
         activeScreen: nextScreen
       })

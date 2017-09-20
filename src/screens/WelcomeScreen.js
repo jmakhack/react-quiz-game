@@ -16,7 +16,7 @@ class WelcomeScreen extends PureComponent {
    * @memberof WelcomeScreen
    */
   onClickStart() {
-    this.props.eventEmitter.emit('showNextScreen', 'question')
+    this.props.eventEmitter.emit('showNextScreen')
   }
 
   /** @inheritdoc */
