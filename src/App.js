@@ -5,7 +5,14 @@ import QuestionScreen from './screens/QuestionScreen'
 import EndScreen from './screens/EndScreen'
 import './App.css'
 
+/**
+ * Main class to handle all app logic
+ *
+ * @class App
+ * @extends {Component}
+ */
 class App extends Component {
+  /** @inheritdoc */
   constructor(props) {
     super(props)
     this.state = {
@@ -14,6 +21,7 @@ class App extends Component {
     }
   }
 
+  /** @inheritdoc */
   componentWillMount() {
     this.eventEmitter = new EventEmitter()
 
@@ -38,6 +46,12 @@ class App extends Component {
     })
   }
 
+  /**
+   * Returns the screen component corresponding to the current state
+   *
+   * @returns {object} jsx component of the current active screen, null if not found
+   * @memberof App
+   */
   getActiveScreen() {
     const { activeScreen, score } = this.state
 
@@ -53,6 +67,7 @@ class App extends Component {
     }
   }
 
+  /** @inheritdoc */
   render() {
     return (
       <div className="App">

@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Button from '../components/Button'
 import _ from 'lodash'
+import Button from '../components/Button'
 import './Screen.css'
 
+/**
+ * Main quiz screen that displays questions and answer choices
+ *
+ * @class QuestionScreen
+ * @extends {Component}
+ */
 class QuestionScreen extends Component {
+  /** @inheritdoc */
   constructor(props) {
     super(props)
     this.state = {
@@ -13,10 +20,16 @@ class QuestionScreen extends Component {
     }
   }
 
+  /** @inheritdoc */
   componentWillMount() {
     this.showNextQuestion()
   }
 
+  /**
+   * Change state to display next quiz question
+   *
+   * @memberof QuestionScreen
+   */
   showNextQuestion() {
     const { curQuestion } = this.state
 
@@ -47,6 +60,12 @@ class QuestionScreen extends Component {
     })
   }
 
+  /**
+   * Click handler for answer buttons
+   *
+   * @param {string} answer
+   * @memberof QuestionScreen
+   */
   onClickAnswer(answer) {
     const { correctAnswer } = this.state
     if (answer === correctAnswer) {
@@ -57,6 +76,7 @@ class QuestionScreen extends Component {
     }
   }
 
+  /** @inheritdoc */
   render() {
     return (
       <div>
@@ -73,7 +93,9 @@ class QuestionScreen extends Component {
 }
 
 QuestionScreen.propTypes = {
+  /** Global event emitter */
   eventEmitter: PropTypes.object.isRequired,
+  /** Current quiz score */
   score: PropTypes.number.isRequired
 }
 

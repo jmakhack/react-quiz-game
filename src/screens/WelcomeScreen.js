@@ -3,19 +3,28 @@ import PropTypes from 'prop-types'
 import Button from '../components/Button'
 import './Screen.css'
 
-// Message to display on app startup
-const welcomeMessage = 'Welcome to the Rock, Paper, Scissors Quiz Game!'
-
+/**
+ * Initial welcome screen for the quiz app
+ *
+ * @class WelcomeScreen
+ * @extends {PureComponent}
+ */
 class WelcomeScreen extends PureComponent {
+  /**
+   * Click handler for the start button
+   *
+   * @memberof WelcomeScreen
+   */
   onClickStart() {
     this.props.eventEmitter.emit('showNextScreen', 'question')
   }
 
+  /** @inheritdoc */
   render() {
     return (
       <div>
         <div className="header">
-          {welcomeMessage}
+          Welcome to the Rock, Paper, Scissors Quiz Game!
         </div>
         <Button onClick={() => this.onClickStart()} label="Start"/>
       </div>
@@ -24,6 +33,7 @@ class WelcomeScreen extends PureComponent {
 }
 
 WelcomeScreen.propTypes = {
+  /** Global event emitter */
   eventEmitter: PropTypes.object.isRequired
 }
 
