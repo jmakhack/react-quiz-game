@@ -79,14 +79,14 @@ class QuestionScreen extends Component {
   /** @inheritdoc */
   render() {
     return (
-      <div>
+      <div className="QuestionScreen">
         Score: {this.props.score}
         <div className="header">
           {this.state.curQuestion}
         </div>
-        <Button onClick={() => this.onClickAnswer('rock')} label='Rock'/>
-        <Button onClick={() => this.onClickAnswer('paper')} label='Paper'/>
-        <Button onClick={() => this.onClickAnswer('scissors')} label='Scissors'/>
+        <Button onClick={() => this.onClickAnswer('rock')} label="Rock"/>
+        <Button onClick={() => this.onClickAnswer('paper')} label="Paper"/>
+        <Button onClick={() => this.onClickAnswer('scissors')} label="Scissors"/>
       </div>
     )
   }

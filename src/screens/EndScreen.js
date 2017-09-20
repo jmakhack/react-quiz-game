@@ -22,12 +22,12 @@ class EndScreen extends PureComponent {
   /** @inheritdoc */
   render() {
     return (
-      <div>
+      <div className="EndScreen">
         Thanks for playing!
         <div className="header">
           Final Score: {this.props.score}
         </div>
-        <Button onClick={() => this.onClickRestart()} label='Try Again'/>
+        <Button onClick={() => this.onClickRestart()} label="Try Again"/>
       </div>
     )
   }

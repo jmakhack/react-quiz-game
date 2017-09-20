@@ -22,7 +22,7 @@ class WelcomeScreen extends PureComponent {
   /** @inheritdoc */
   render() {
     return (
-      <div>
+      <div className="WelcomeScreen">
         <div className="header">
           Welcome to the Rock, Paper, Scissors Quiz Game!
         </div>

@@ -8,9 +8,11 @@ import './Button.css'
  */
 const Button = props => {
   return (
-    <button className='button' onClick={props.onClick}>
-      {props.label}
-    </button>
+    <div className="Button">
+      <button className="button" onClick={props.onClick}>
+        {props.label}
+      </button>
+    </div>
   )
 }
 
